@@ -3,7 +3,7 @@
 from setuptools import setup
 import versioneer
 
-setup(name='s3fs',
+setup(name='s3fs-py36-backport',
       version=versioneer.get_version(),
       cmdclass=versioneer.get_cmdclass(),
       classifiers=[
@@ -14,14 +14,11 @@ setup(name='s3fs',
           'Programming Language :: Python :: 3.7',
           'Programming Language :: Python :: 3.8',
       ],
-      description='Convenient Filesystem interface over S3',
-      url='http://github.com/dask/s3fs/',
-      maintainer='Martin Durant',
-      maintainer_email='mdurant@continuum.io',
+      description='s3fs backport to python 3.6',
+      url='http://github.com/isidentical-backports/s3fs/',
       license='BSD',
-      keywords='s3, boto',
       packages=['s3fs'],
-      python_requires='>= 3.7',
+      python_requires='>= 3.6',
       install_requires=[open('requirements.txt').read().strip().split('\n')],
       extras_require = {
           'awscli': ['aiobotocore[awscli]'],
